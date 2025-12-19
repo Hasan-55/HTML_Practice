@@ -7,7 +7,6 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Custom animations and transitions */
         body {
             font-family: 'Arial', sans-serif;
             overflow-x: hidden; /* Prevent horizontal scroll */
@@ -55,6 +54,9 @@
             animation: gradientShift 5s ease infinite;
             color: white;
             padding: 100px 0;
+            background-image: url('https://via.placeholder.com/1200x600/007bff/ffffff?text=Shop+Watches+Now');
+            background-position: center center;
+            background-size: cover;
         }
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
@@ -89,6 +91,22 @@
             text-align: center;
             border-radius: 8px;
             margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        /* Modal styling */
+        .modal-header, .modal-footer {
+            border: none;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 50px 0;
+            }
+            .card-body {
+                padding: 1.25rem;
+            }
         }
     </style>
 </head>
@@ -102,22 +120,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            More
-                        </a>
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#contact">Contact</a></li>
                             <li><hr class="dropdown-divider"></li>
@@ -133,7 +141,7 @@
     <section id="home" class="hero text-center">
         <div class="container">
             <h1 class="display-4 fade-in">Welcome to My Watch Store</h1>
-            <p class="lead fade-in">"Discover timeless craftsmanship and modern style at our watch store, where every timepiece makes a statement before you even say a word."</p>
+            <p class="lead fade-in">"Discover timeless craftsmanship and modern style at our watch store, where every timepiece makes a statement."</p>
             <button class="btn btn-light btn-lg btn-pulse" data-bs-toggle="modal" data-bs-target="#exampleModal">Shop Now</button>
         </div>
     </section>
@@ -145,7 +153,6 @@
                 <div class="col-md-6">
                     <h2>About Us</h2>
                     <p>Welcome to Best Watches, your premier destination for exquisite timepieces. Founded with a passion for precision and elegance, we offer a curated selection of watches that blend traditional craftsmanship with modern innovation. Our expert team ensures every watch meets the highest standards of quality and style, making us the go-to choice for watch enthusiasts worldwide.</p>
-                    <p>Explore our collection and find the perfect watch to complement your lifestyle.</p>
                 </div>
                 <div class="col-md-6 text-center">
                     <img src="https://dazzle.com.pk/wp-content/uploads/2024/11/1200x-1-2.jpg" alt="About Us Image" class="img-fluid rounded shadow">
@@ -185,42 +192,9 @@
                     <div class="card fade-in">
                         <img src="https://www.watchonista.com/sites/default/files/watchographer/1/watches/492970/pictures/jacobandcocom_708331768_copie_square.jpg" class="card-img-top" alt="Watch 3">
                         <div class="card-body">
-                            <h5 class="card-title">Jacob & Co. Bugatti Chiron Tourbillon Baguette Blue Sapphires</h5>
+                            <h5 class="card-title">Jacob & Co. Bugatti Chiron Tourbillon</h5>
                             <p class="card-text">"A masterpiece of power and luxury, the Bugatti Chiron Tourbillon dazzles with blue sapphires and engineering made to astonish."</p>
                             <p class="card-text"><strong>Price: $880,000</strong></p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card fade-in">
-                        <img src="https://swisswatches-magazine.com/uploads/2024/01/hublot-mp10-tourbillon-weight-energy-system-titanium-lvmh-week-2048x1365.jpg" class="card-img-top" alt="Watch 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Hublot MP-10 Tourbillon Weight Energy System Titanium</h5>
-                            <p class="card-text">"Engineered for precision, the Hublot MP-10 Tourbillon fuses avant‑garde titanium build with groundbreaking energy mechanics for uncompromising luxury."</p>
-                            <p class="card-text"><strong>Price: $264,000</strong></p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card fade-in">
-                        <img src="https://somervillewatchcompany.com/cdn/shop/files/seiko-mod-batman-gmt-dive-watch-premium-dial-974434.jpg?v=1725921505&width=713" class="card-img-top" alt="Watch 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Seiko Mod GMT "Batman" Dive Watch </h5>
-                            <p class="card-text">"Bold, precise, and adventurous—the Seiko Mod GMT 'Batman' takes your style across time zones with striking flair."</p>
-                            <p class="card-text"><strong>Price: $24,000</strong></p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card fade-in">
-                        <img src="https://i0.wp.com/masterhorologer.com/wp-content/uploads/2019/03/Patek-Philippe-Grandmaster-Chime-Ref.-6300G-010-New-White-Gold-Version-with-Blue-Opaline-Dials-1.jpg?fit=1920%2C2716&ssl=1" class="card-img-top" alt="Watch 6">
-                        <div class="card-body">
-                            <h5 class="card-title">Patek Philippe Grandmaster Chime Ref.</h5>
-                            <p class="card-text">"The ultimate masterpiece of watchmaking, with 20 complications and dual dials."</p>
-                            <p class="card-text"><strong>Price: $31,000,000</strong></p>
                             <a href="#" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
@@ -253,7 +227,7 @@
                 </div>
                 <div class="col-md-6">
                     <h5>Get in Touch</h5>
-                    <p>Order online and get the best premium watches online at your home with the best quality available which gives yo0u a feeling of premium feel.</p>
+                    <p>Order online and get the best premium watches delivered to your home with the best quality available, giving you a premium experience.</p>
                     <p><strong>Email:</strong> info@example.com</p>
                     <p><strong>Phone:</strong> +1 (123) 456-7890</p>
                 </div>
@@ -264,7 +238,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>&copy; 2023 My Website. All rights reserved.</p>
+            <p>&copy; 2023 Best Watches. All rights reserved.</p>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
                 <li class="list-inline-item"><a href="#" class="text-white">Terms of Service</a></li>
@@ -277,15 +251,15 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Shop Now</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    This modal uses Bootstrap's built-in fade transition.
+                    <p>Get exclusive deals on premium watches by shopping now!</p>
+                    <button class="btn btn-success">Shop Now</button>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
