@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+</head>
+<body>
+    <button onclick="start()">Fill Tank</button>
+    <div id="whileloop"></div>
+
+    <script>
+        function start(){
+            let level = 0;
+            while(level < 5){
+                level++;
+            }
+            document.getElementById("whileloop").innerHTML=
+            "tank filled level;" + level;
+        }
+    </script>
+    
+</body>
+</html>
